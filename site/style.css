@@ -1,0 +1,175 @@
+/* Core Styles */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #333;
+    color: blue;
+    font-size: 1.1em;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+    padding: 1em 0;
+  }
+
+  p {
+    margin: 0;
+    padding: 1em 0;
+  }
+
+  .btn {
+    display: inline-block;
+    background: #333;
+    color: blue;
+    text-decoration: none;
+    padding: 4em 4em;
+    border: 4px solid #666;
+    margin: 1em 0;
+  }
+
+  .btn:hover {
+    background: #eaeaea;
+    color: #333;
+  }
+
+  /* Header Showcase */
+
+  #showcase {
+    min-height: 450px;
+    color: #fff;
+    text-align: center;
+  }
+
+  #showcase .bg-image {
+    position: absolute;
+    background: #333
+      url("https://static.pexels.com/photos/248515/pexels-photo-248515.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    z-index: -1;
+    opacity: 0.4;
+  }
+
+  #showcase h1 {
+    padding-top: 100px;
+    padding-bottom: 0;
+  }
+
+  #showcase .content-wrap,
+  #section-a .content-wrap {
+    padding: 0 1.5em;
+  }
+
+  /* Section A */
+
+  #section-a {
+    background: #eaeaea;
+    color: green;
+    padding-bottom: 2em;
+  }
+
+  /* Section B */
+
+  #section-b {
+    padding: 2em 2em 2em;
+  }
+
+  #section-b ul {
+    list-style: none;
+    margin: 0;
+    padding: 1px;
+  }
+
+  #section-b li {
+    margin-bottom: 1em;
+    background: #fff;
+    color: purple;
+  }
+
+  .card-content {
+    padding: 2em;
+  }
+
+  /* Section C */
+
+  #section-c {
+    background: #fff;
+    color: grey;
+    padding: 1em;
+  }
+
+  /* Section D / Boxes */
+
+  #section-d .box {
+    padding: 2em;
+    color: white;
+  }
+
+  #section-d .box:first-child {
+    background: red;
+  }
+
+  /* Footer */
+
+  #main-footer {
+    padding: 2em;
+    background: #000;
+    color: red;
+    text-align: center;
+  }
+
+  #main-footer a {
+    color: white;
+    text-decoration: none;
+  }
+
+  /* Media Queries */
+
+  @media (min-width: 850px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    }
+
+    #section-a .content-text {
+      columns: 2;
+      column-gap: 2em;
+    }
+
+    #section-a .content-text p {
+      padding-top: 0;
+    }
+
+    .content-wrap,
+    #section-b ul {
+      grid-column: 2/4;
+    }
+
+    .box,
+    #main-footer div {
+      grid-column: span 2;
+    }
+
+    #section-b ul {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    #section-b li {
+      width: 40%;
+    }
+  }
